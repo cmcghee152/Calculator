@@ -1,0 +1,88 @@
+<style>
+    .subscribe-button {
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 105px;
+        /* Makes rounded edges with higher pixels */
+        border-radius: 2px;
+        /* When the cursor hovers over the button, it becomes a pointer */
+        cursor: pointer;
+        /* Gives space to the right of the button */
+        margin-right: 8px;
+        /* First is what you want to change, second is how quickly */
+        transition: opacity 0.15s;
+    }
+
+    /* For what happens when you hover over the button */
+    .subscribe-button:hover {
+        /* 1 is normal, 0 is completely faded */
+        opacity: 0.8;
+    }
+
+    /* For what happens when you click the button */
+    .subscribe-button:active {
+        opacity: 0.5;
+    }
+
+</style>
+
+<style>
+    .join-button {
+        background-color: white;
+        color: rgb(30, 95, 224);
+        border-color: rgb(30, 95, 224);
+        /* Makes the border one color */
+        border-style: solid;
+        border-width: 1px;
+        height: 36px;
+        width: 62px;
+        /* Makes rounded edges with higher pixels */
+        border-radius: 2px;
+        cursor: pointer;
+        /* Can separate changes by a comma */
+        transition: background-color 1s, color 1s;
+    }
+
+    .join-button:hover {
+        background-color: rgb(30, 95, 224);
+        color: white;
+    }
+
+    .join-button:active {
+        opacity: 0.7;
+    }
+
+</style>
+
+<style>
+    .tweet-button {
+        background-color: rgb(30, 95, 224);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 74px;
+        /* Should be half of min(height, width) for rounded edges */
+        border-radius: 18px;
+        cursor: pointer;
+        /* Makes font bold */
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 8px;
+        /*First determines horizontal position of shadow */
+        box-shadow: 0 0 0 black;
+    }
+</style>
+
+<button class="subscribe-button">
+    SUBSCRIBE
+</button>
+
+<button class="join-button">
+    JOIN
+</button>
+
+<button class="tweet-button">
+    Tweet
+</button>
