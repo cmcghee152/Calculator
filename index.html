@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="manifest" href="manifest.json">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
 
 <style>
@@ -298,78 +299,84 @@
         height: 50px;
         width: 200px;
     }
+
+    .container {
+        width = 100%;
+    }   
 </style>
 
 <head>
-    <div>
-        <input type="text" id="display" readonly>
-    </div>
-    <div>
-        <button onclick="clearDisplay()" class="numAC">
-            AC
-        </button>
-        <button onclick="appendToDisplay('-')" class="numposneg">
-            +/-
-        </button>
-        <button onclick="appendToDisplay('%')" class="nummod">
-            %
-        </button>
-        <button onclick="appendToDisplay('÷')" class="numdiv">
-            ÷
-        </button>
-    </div>
-    <div>
-        <button onclick="appendToDisplay('7')" class="num7">
-            7
-        </button>
-        <button onclick="appendToDisplay('8')" class="num8">
-            8
-        </button>
-        <button onclick="appendToDisplay('9')" class="num9">
-            9
-        </button>
-        <button onclick="appendToDisplay('x')" class="nummult">
-            x
-        </button>
-    </div>
-    <div>
-        <button onclick="appendToDisplay('4')" class="num4">
-            4
-        </button>
-        <button onclick="appendToDisplay('5')" class="num5">
-            5
-        </button>
-        <button onclick="appendToDisplay('6')" class="num6">
-            6
-        </button>
-        <button onclick="appendToDisplay('-')" class="numsub">
-            -
-        </button>
-    </div>
-    <div>
-        <button onclick="appendToDisplay('1')" class="num1">
-            1
-        </button>
-        <button onclick="appendToDisplay('2')" class="num2">
-            2
-        </button>
-        <button onclick="appendToDisplay('3')" class="num3">
-            3
-        </button>
-        <button onclick="appendToDisplay('+')" class="numadd">
-            +
-        </button>
-    </div>
-    <div>
-        <button onclick="appendToDisplay('0')" class="num0">
-            0
-        </button>
-        <button onclick="appendToDisplay('.')" class="numdot">
-            .
-        </button>
-        <button onclick="evaluateExp()" class="numequal">
-            =
-        </button>
+    <div class="container">
+        <div>
+            <input type="text" id="display" readonly>
+        </div>
+        <div>
+            <button onclick="clearDisplay()" class="numAC">
+                AC
+            </button>
+            <button onclick="appendToDisplay('-')" class="numposneg">
+                +/-
+            </button>
+            <button onclick="appendToDisplay('%')" class="nummod">
+                %
+            </button>
+            <button onclick="appendToDisplay('÷')" class="numdiv">
+                ÷
+            </button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('7')" class="num7">
+                7
+            </button>
+            <button onclick="appendToDisplay('8')" class="num8">
+                8
+            </button>
+            <button onclick="appendToDisplay('9')" class="num9">
+                9
+            </button>
+            <button onclick="appendToDisplay('x')" class="nummult">
+                x
+            </button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('4')" class="num4">
+                4
+            </button>
+            <button onclick="appendToDisplay('5')" class="num5">
+                5
+            </button>
+            <button onclick="appendToDisplay('6')" class="num6">
+                6
+            </button>
+            <button onclick="appendToDisplay('-')" class="numsub">
+                -
+            </button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('1')" class="num1">
+                1
+            </button>
+            <button onclick="appendToDisplay('2')" class="num2">
+                2
+            </button>
+            <button onclick="appendToDisplay('3')" class="num3">
+                3
+            </button>
+            <button onclick="appendToDisplay('+')" class="numadd">
+                +
+            </button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('0')" class="num0">
+                0
+            </button>
+            <button onclick="appendToDisplay('.')" class="numdot">
+                .
+            </button>
+            <button onclick="evaluateExp()" class="numequal">
+                =
+            </button>
+        </div>
     </div>
 </head>
 <!-- Hello I am testing this-->

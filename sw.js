@@ -1,6 +1,6 @@
 self.addEventListener("install", e => {
     e.waitUntil(
-        caches.open("habit-tracker").then(cache => {
+        caches.open("Calculator").then(cache => {
             return cache.addAll(["/", "/index.html", "/manifest.json"]);
         })
     );
