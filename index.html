@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
 
 <style>
     .numAC {
@@ -291,7 +292,7 @@
 </style>
 
 <style>
-    .text-box {
+    #display {
         top: 0px;
         margin-left: 600px;
         height: 50px;
@@ -301,74 +302,99 @@
 
 <head>
     <div>
-        <input class="text-box">
+        <input type="text" id="display" readonly>
     </div>
     <div>
-        <button class="numAC">
+        <button onclick="clearDisplay()" class="numAC">
             AC
         </button>
-        <button class="numposneg">
+        <button onclick="appendToDisplay('-')" class="numposneg">
             +/-
         </button>
-        <button class="nummod">
+        <button onclick="appendToDisplay('%')" class="nummod">
             %
         </button>
-        <button class="numdiv">
-            &divide
+        <button onclick="appendToDisplay('÷')" class="numdiv">
+            ÷
         </button>
     </div>
     <div>
-        <button class="num7">
+        <button onclick="appendToDisplay('7')" class="num7">
             7
         </button>
-        <button class="num8">
+        <button onclick="appendToDisplay('8')" class="num8">
             8
         </button>
-        <button class="num9">
+        <button onclick="appendToDisplay('9')" class="num9">
             9
         </button>
-        <button class="nummult">
+        <button onclick="appendToDisplay('x')" class="nummult">
             x
         </button>
     </div>
     <div>
-        <button class="num4">
+        <button onclick="appendToDisplay('4')" class="num4">
             4
         </button>
-        <button class="num5">
+        <button onclick="appendToDisplay('5')" class="num5">
             5
         </button>
-        <button class="num6">
+        <button onclick="appendToDisplay('6')" class="num6">
             6
         </button>
-        <button class="numsub">
+        <button onclick="appendToDisplay('-')" class="numsub">
             -
         </button>
     </div>
     <div>
-        <button class="num1">
+        <button onclick="appendToDisplay('1')" class="num1">
             1
         </button>
-        <button class="num2">
+        <button onclick="appendToDisplay('2')" class="num2">
             2
         </button>
-        <button class="num3">
+        <button onclick="appendToDisplay('3')" class="num3">
             3
         </button>
-        <button class="numadd">
+        <button onclick="appendToDisplay('+')" class="numadd">
             +
         </button>
     </div>
     <div>
-        <button class="num0">
+        <button onclick="appendToDisplay('0')" class="num0">
             0
         </button>
-        <button class="numdot">
+        <button onclick="appendToDisplay('.')" class="numdot">
             .
         </button>
-        <button class="numequal">
+        <button onclick="evaluateExp()" class="numequal">
             =
         </button>
     </div>
 </head>
 
+<script> 
+    function appendToDisplay (value) {
+        const display = document.getElementById('display');
+        display.value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+    
+    function evaluateExp() {
+        const display = document.getElementById('display');
+        try {
+            
+            const expression = display.value
+            .replace(/x/g, '*')
+            .replace(/÷/g, '/');  
+            const result = math.evaluate(expression);
+            display.value = result;
+        } catch (err) {
+        display.value = 'Error';
+        }
+    }
+
+</script>
