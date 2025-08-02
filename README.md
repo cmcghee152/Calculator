@@ -1,2 +1,2 @@
 # Calculator
-Calculator App
+Calculator App - this app will let people use a calculator
