@@ -16,7 +16,7 @@
         /* When the cursor hovers over the button, it becomes a pointer */
         cursor: pointer;
         /* Gives space to the right of the button */
-        margin-left: 600px;
+        /*margin-left: 600px;*/
         margin-top: 2px;
     }
 
@@ -33,7 +33,6 @@
         cursor: pointer;
         /* Gives space to the right of the button */
         margin-left: 0px;
-        
     }
 
     .nummod {
@@ -79,7 +78,7 @@
         /* When the cursor hovers over the button, it becomes a pointer */
         cursor: pointer;
         /* Gives space to the right of the button */
-        margin-left: 600px;
+        /*margin-left: 600px;*/
         margin-top: 2px;
     }
     .num8 {
@@ -139,7 +138,7 @@
         /* When the cursor hovers over the button, it becomes a pointer */
         cursor: pointer;
         /* Gives space to the right of the button */
-        margin-left: 600px;
+        /*margin-left: 600px;*/
         margin-top: 2px;
     }
     .num5 {
@@ -199,7 +198,7 @@
         /* When the cursor hovers over the button, it becomes a pointer */
         cursor: pointer;
         /* Gives space to the right of the button */
-        margin-left: 600px;
+        /*margin-left: 600px;*/
         margin-top: 2px;
     }
     .num2 {
@@ -259,7 +258,7 @@
         /* When the cursor hovers over the button, it becomes a pointer */
         cursor: pointer;
         /* Gives space to the right of the button */
-        margin-left: 652px;
+        /*margin-left: 652px;*/
         margin-top: 2px;
     }
     .numdot {
@@ -295,17 +294,29 @@
 <style>
     #display {
         top: 0px;
-        margin-left: 600px;
+        /*margin-left: 600px;*/
         height: 50px;
         width: 200px;
     }
 
+    /* Make body take up full screen and center its content */
+    body {
+    height: 100vh;              /* full viewport height */
+    display: flex;
+    justify-content: center;    /* horizontal center */
+    align-items: center;        /* vertical center */
+    margin: 0;                  /* remove default margin */
+    }
+
+    /* Optional: add styling to your container */
     .container {
-        width = 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
     }   
 </style>
 
-<head>
+<body>
     <div class="container">
         <div>
             <input type="text" id="display" readonly>
@@ -378,8 +389,7 @@
             </button>
         </div>
     </div>
-</head>
-<!-- Hello I am testing this-->
+</body>
 
 <script> 
     function appendToDisplay (value) {
